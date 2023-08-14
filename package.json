@@ -1,0 +1,16 @@
+{
+  "name": "test_markdonwnlint-cli2",
+  "version": "1.0.0",
+  "description": "Repo to test markdownlint --config param with extends option",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint:zh-cn; npm run lint:de",
+    "lint:zh-cn": "markdownlint-cli2 --config lint-configs/zh-cn.markdownlint-cli2.jsonc docs/zh-cn/**/*.md",
+    "lint:de": "markdownlint-cli2 --config lint-configs/de.markdownlint-cli2.jsonc docs/de/**/*.md"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "markdownlint-cli2": "^0.8.1"
+  }
+}

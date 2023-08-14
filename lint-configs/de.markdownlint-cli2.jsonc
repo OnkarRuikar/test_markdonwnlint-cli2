@@ -1,0 +1,8 @@
+//zh-cn specific rules
+
+{
+    "config": {
+       "extends": "./base.jsonc",
+       "no-empty-links": true
+     }
+}

@@ -1,0 +1,4 @@
+// rules that apply to all locales
+{
+    "line-length": false
+}
