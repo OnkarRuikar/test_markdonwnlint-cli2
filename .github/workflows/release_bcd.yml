@@ -19,7 +19,6 @@ jobs:
     steps:
     - uses: actions/github-script@v6
       with:
-        github-token: ${{ secrets.WORKFLOW_PAT }}
         script: |
           const result = await github.rest.repos.createDispatchEvent({
             owner: 'OnkarRuikar',
