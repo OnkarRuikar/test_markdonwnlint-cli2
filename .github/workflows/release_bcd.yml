@@ -21,13 +21,10 @@ jobs:
       with:
         github-token: ${{ secrets.WORKFLOW_PAT }}
         script: |
-          const result = await github.rest.actions.createWorkflowDispatch({
+          const result = await github.rest.repos.createDispatchEvent({
             owner: 'OnkarRuikar',
             repo: 'temp',
-            workflow_id: 'target_workflow.yml',
-            ref: 'main',
-            inputs: {
-              notes: "v5.3.10"
-            },
+            event_type: 'bcd_release',
+            client_payload: '{"version": "v5.3.10"}'
           })
           console.log(result);
