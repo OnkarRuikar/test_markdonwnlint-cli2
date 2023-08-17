@@ -1,17 +1,7 @@
 name: Release BCD
 
 on:
-  workflow_dispatch:
-    # Inputs the workflow accepts.
-    inputs:
-      name:
-        description: 'Version'
-        # Default value if no value is explicitly provided
-        default: '0.0.0'
-        required: true
-        type: string
-
-permissions: write-all
+  workflow_dispatch
 
 jobs:
   release:
@@ -25,6 +15,6 @@ jobs:
             owner: 'OnkarRuikar',
             repo: 'temp',
             event_type: 'bcd_release',
-            client_payload: '{"version": "v5.3.10"}'
+            client_payload: {"version": "v5.3.10"}
           })
           console.log(result);
