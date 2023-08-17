@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/github-script@v6
       with:
-        github-token: ${{ secrets.GH_TOKEN }}
+        github-token: ${{ secrets.WORKFLOW_PAT }}
         script: |
           const result = await github.rest.actions.createWorkflowDispatch({
             owner: 'OnkarRuikar',
